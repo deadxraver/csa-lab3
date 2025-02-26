@@ -14,7 +14,7 @@ _start:
   load_ind    input_addr  ; acc = *input_addr
   store       n           ; n = acc
   store       n1          ; n1 = acc
-  
+ 
 revert_n:
   load_imm    32          ; counter for loop
   store       i           ; i = 32

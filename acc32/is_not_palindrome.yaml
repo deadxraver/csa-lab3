@@ -1,4 +1,4 @@
-name: hello
+name: is_not_palindrome
 limit: 493
 memory_size: 0x1000
 input_streams:
@@ -6,7 +6,7 @@ input_streams:
   0x84: []
 reports:
   - name: Step-by-step
-    slice: all
+    slice: ["tail", 20]
     view: |
       {pc}:	{instruction}	{pc:label}
   - name: Result
