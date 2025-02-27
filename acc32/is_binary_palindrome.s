@@ -7,7 +7,7 @@ n1:              .word  0x00               ; copy of input
 n2:              .word  0x00               ; variable to be compared with n1
 i:               .word  0x00               ; var for loops
 one:             .word  0x01               ; const for bitwise AND & shift left & decrement а че ваще декремента нет лоол)
-alignment:       .word '................................'
+alignment:       .word '..'
 
     .text
 
