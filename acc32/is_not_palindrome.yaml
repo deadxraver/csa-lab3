@@ -1,5 +1,5 @@
 name: is_not_palindrome
-limit: 493
+limit: 500
 memory_size: 0x1000
 input_streams:
   0x80: [5]
