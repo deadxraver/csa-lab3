@@ -49,3 +49,4 @@ is_not_palindrome:
     load_imm     0                           ; false
     store_ind    output_addr                 ; stdout
     halt
+
