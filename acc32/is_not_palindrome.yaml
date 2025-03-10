@@ -6,7 +6,7 @@ input_streams:
   0x84: []
 reports:
   - name: Step-by-step
-    slice: ["tail", 20]
+    slice: all
     view: |
       {pc}:	{instruction}	{pc:label}
   - name: Result

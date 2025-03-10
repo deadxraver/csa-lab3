@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://wrench.edu.swampbuds.me/result/bd4690b3-057e-4354-b131-ea9ec28d63eb -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Results</title>
+    <script src="./Simulation Results_files/browser@4"></script><style>/*! tailwindcss v4.0.12 | MIT License | https://tailwindcss.com */
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --spacing: 0.25rem;
+    --radius-lg: 0.5rem;
+    --default-font-family: var(--font-sans);
+    --default-font-feature-settings: var(--font-sans--font-feature-settings);
+    --default-font-variation-settings: var(--font-sans--font-variation-settings);
+    --default-mono-font-family: var(--font-mono);
+    --default-mono-font-feature-settings: var(--font-mono--font-feature-settings);
+    --default-mono-font-variation-settings: var(--font-mono--font-variation-settings);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var( --default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' );
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    line-height: inherit;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var( --default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace );
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+    color: color-mix(in oklab, currentColor 50%, transparent);
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .flex {
+    display: flex;
+  }
+  .hidden {
+    display: none;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-\[50\%\] {
+    max-width: 50%;
+  }
+  .min-w-\[300px\] {
+    min-width: 300px;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
+  .place-self-end {
+    place-self: end;
+  }
+  .self-center {
+    align-self: center;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .bg-transparent {
+    background-color: transparent;
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .pr-6 {
+    padding-right: calc(var(--spacing) * 6);
+  }
+  .pr-8 {
+    padding-right: calc(var(--spacing) * 8);
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pl-8 {
+    padding-left: calc(var(--spacing) * 8);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+}
+</style>
+    <script defer="" src="./Simulation Results_files/flowbite.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Simulation Results_files/css2" rel="stylesheet">
+    <meta content="#1a1a1a" name="theme-color">
+    <!-- restyled by huji, proud 🦎🪽✨⬆️☁️ -->
+  </head>
+
+  <body class="full flex flex-col justify-center items-center min-h-screen">
+    <div class="text-center w-full mt-4 mb-2">
+      <!-- Добавляем отступ снизу -->
+      <h1 class="large white">
+        <a class="subtle-hover" href="https://wrench.edu.swampbuds.me/">Wrench Report</a>
+      </h1>
+    </div>
+
+    <div class="self-center">
+      <a href="https://github.com/ryukzak/wrench" class="purple hover" target="_blank">[github]</a>
+      <span class="grey separator-char">|</span>
+      <a href="https://github.com/ryukzak/wrench/tree/master/docs" class="fuschia hover" target="_blank">[isa_docs]</a>
+      <span class="grey separator-char">|</span>
+      <a href="https://github.com/ryukzak/wrench/blob/master/variants.md" class="orange hover" target="_blank">[variants]</a>
+      <span class="grey separator-char">|</span>
+      <button onclick="onInvertClick()" class="blue hover">
+        [invert_theme]
+      </button>
+    </div>
+
+    <script>
+      function onInvertClick() {
+        document.body.classList.toggle("inverted");
+        window.localStorage.setItem(
+          "prefers-color-scheme",
+          document.body.classList.contains("inverted") ? "light" : "dark",
+        );
+      }
+
+      if (
+        window.matchMedia &&
+        window.localStorage.getItem("prefers-color-scheme") === null
+      ) {
+        if (!window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          document.body.classList.add("inverted");
+        }
+      } else if (
+        window.localStorage.getItem("prefers-color-scheme") === "light"
+      ) {
+        document.body.classList.add("inverted");
+      }
+
+      var copiedLinkCount = 0;
+      async function copyLink() {
+        await navigator.clipboard.writeText(window.location.href);
+        copiedLinkCount++;
+        let button = document.getElementById("copy-link-button");
+        button.classList.remove("white");
+        button.classList.add("green");
+        let button_text = "";
+        if (copiedLinkCount === 1) {
+          button_text = "[copied!]";
+        } else {
+          button_text = `[copied ${copiedLinkCount} times!]`;
+        }
+        button.innerText = button_text;
+      }
+    </script>
+    <div class="self-center flex flex-wrap gap-8 w-full p-4 mt-8 pr-8 pl-8">
+      <div class="flex-1 min-w-[300px] max-w-[50%] mt-6">
+        <div>
+          <div>
+            <p class="grey texm-sm text-left">/* variant: is_binary_palindrome */</p>
+            <p class="grey texm-sm text-left mb-6">/* author: Чумаченко Даниил Олегович */</p>
+          </div>
+          <div>
+            <h2 id="empty-comment-header" class="hidden grey mb-4">
+              /* comment: not found */
+            </h2>
+            <div id="comment-header">
+              <h2 class="grey mb-4">/* comment */</h2>
+              <pre id="comment-text-element" class="bg-dark-gray p-4 rounded-lg overflow-x-auto mb-4">P3215</pre>
+            </div>
+          </div>
+
+          <div>
+            <div class="pr-6 flex flex-row justify-between items-center mt-6 mb-4">
+              <span class="grey">/* assembler_code */</span>
+              <button id="copy-assembler-button" onclick="copyAssembler()" class="place-self-end white hover">
+                [copy]
+              </button>
+            </div>
+            <div id="accordion-collapse-assembler" data-accordion="collapse" class="mb-4 bg-dark-gray p-4 rounded-lg" data-inactive-classes="vim-folded orange-low-saturation" data-active-classes="white bg-transparent">
+              <h2 id="accordion-collapse-heading-assembler" class="flex items-center justify-between w-full text-left hover white bg-transparent" data-accordion-target="#accordion-collapse-body-assembler" aria-expanded="true" aria-controls="accordion-collapse-body-assembler">
+                <span class="noselect">assembler_code =</span>
+              </h2>
+              <div id="accordion-collapse-body-assembler" class="" aria-labelledby="accordion-collapse-heading-assembler">
+                <pre id="assembler-code-text-element" class="pb-4 rounded-lg overflow-x-auto">    .data
+
+input_addr:      .word  0x80               ; input
+output_addr:     .word  0x84               ; output
+n:               .word  0x00               ; input variable
+n1:              .word  0x00               ; copy of input
+n2:              .word  0x00               ; variable to be compared with n1
+i:               .word  0x00               ; var for loops
+one:             .word  0x01               ; const for bitwise AND &amp; shift left &amp; decrement а че ваще декремента нет лоол)
+alignment:       .word '.......'
+
+    .text
+
+_start:
+    load_ind     input_addr                  ; acc = *input_addr
+    store        n                           ; n = acc
+    store        n1                          ; n1 = acc
+
+revert_n:
+    load_imm     32                          ; counter for loop
+    store        i                           ; i = 32
+
+loop:
+    load         i                           ; acc = i
+    beqz         end_loop                    ; i == 0 ? -&gt; end_loop
+    sub          one                         ; i--
+    store        i                           ; save i
+    load         n2                          ; load n2
+    shiftl       one                         ; n2 &lt;&lt;
+    store        n2                          ; save n2
+    load         n1                          ; acc = n1
+    and          one                         ; n1 &amp; 1
+    add          n2                          ; n2 + n1 mod 2
+    store        n2                          ; save n2
+    load         n1
+    shiftr       one                         ; n1 &gt;&gt;
+    store        n1
+    jmp          loop                        ; next iteration
+
+end_loop:
+    load         n                           ; acc = n
+    sub          n2                          ; n1 - n2
+    bnez         is_not_palindrome           ; n1 != n2 =&gt; not palindrome
+is_palindrome:
+    load_imm     1                           ; true
+    store_ind    output_addr                 ; stdout
+    halt
+is_not_palindrome:
+    load_imm     0                           ; false
+    store_ind    output_addr                 ; stdout
+    halt
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="pr-6 flex flex-row justify-between items-center mt-6 mb-4">
+              <span class="grey">/* simulation_config */</span>
+              <button id="copy-simulation-config-button" onclick="copySimulationConfig()" class="place-self-end white hover">
+                [copy]
+              </button>
+            </div>
+            <div id="accordion-collapse-simulation-config" data-accordion="collapse" class="mb-4 bg-dark-gray p-4 rounded-lg" data-inactive-classes="vim-folded orange-low-saturation" data-active-classes="white bg-transparent">
+              <h2 id="accordion-collapse-heading-simulation-config" class="orange-low-saturation vim-folded flex items-center justify-between w-full text-left hover" data-accordion-target="#accordion-collapse-body-simulation-config" aria-expanded="false" aria-controls="accordion-collapse-body-simulation-config">
+                <span class="noselect">simulation_config =</span>
+              </h2>
+              <div id="accordion-collapse-body-simulation-config" class="hidden" aria-labelledby="accordion-collapse-heading-simulation-config">
+                <pre id="simulation-config-text-element" class="pb-4 rounded-lg overflow-x-auto">name: is_not_palindrome
+limit: 500
+memory_size: 0x1000
+input_streams:
+  0x80: [5]
+  0x84: []
+reports:
+  - name: Step-by-step
+    slice: all
+    view: |
+      {pc}:     {instruction}   {pc:label}
+  - name: Result
+    slice: last
+    view: |
+      numio[0x80]: {io:0x80:dec}
+      numio[0x84]: {io:0x84:dec}
+    assert: |
+      numio[0x80]: [] &gt;&gt;&gt; []
+      numio[0x84]: [] &gt;&gt;&gt; [0]
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-1 min-w-[300px] max-w-[50%]">
+        <h2 class="grey mt-6 mb-4">/* simulation_result */</h2>
+
+        <div>
+          <pre id="status-text-element" class="bg-dark-gray p-4 rounded-lg overflow-x-auto mb-4">$ date
+2025-03-10 05:35:28.111072238 UTC
+$ wrench --version
+0.0.2.0- (1c01ed5) Sun Mar 9 22:28:28 2025 +0100
+
+wrench --isa acc32 /data/bd4690b3-057e-4354-b131-ea9ec28d63eb/source.s -c /data/bd4690b3-057e-4354-b131-ea9ec28d63eb/config.yaml
+ExitSuccess
+</pre>
+        </div>
+
+        <div id="accordion-collapse-simulation-log" data-accordion="collapse" class="mb-4 bg-dark-gray p-4 rounded-lg" data-inactive-classes="vim-folded orange-low-saturation" data-active-classes="white bg-transparent">
+          <h2 id="accordion-collapse-heading-simulation-log" class="vim-folded orange-low-saturation flex items-center justify-between w-full text-left hover" data-accordion-target="#accordion-collapse-body-simulation-log" aria-expanded="false" aria-controls="accordion-collapse-body-simulation-log">
+            <span class="noselect">simulation_log =</span>
+          </h2>
+          <div id="accordion-collapse-body-simulation-log" class="hidden" aria-labelledby="accordion-collapse-heading-simulation-log">
+            <pre id="simulation-log-text-element" class="pb-4 overflow-x-auto">LOG TOO LONG, CROPPED
+
+:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+83:     Sub 24   
+86:     Store (-66)   
+89:     Load (-73)   
+92:     ShiftL 24   
+95:     Store (-79)   
+98:     Load (-86)   
+101:     And 24   
+104:     Add 16   
+107:     Store (-91)   
+110:     Load (-98)   
+113:     ShiftR 24   
+116:     Store (-104)   
+119:     Jmp 75   
+75:     Load (-55)   @loop
+78:     Beqz 124   
+124:     Load (-116)   @end_loop
+127:     Sub 16   
+130:     Bnez 146   
+146:     LoadImm 0   @is_not_palindrome
+151:     StoreInd 4   
+156:     Halt
+---
+# Result
+numio[0x80]: [] &gt;&gt;&gt; []
+numio[0x84]: [] &gt;&gt;&gt; [0]
+</pre>
+          </div>
+        </div>
+        <div id="simulation-log-empty-tag" class="hidden mb-4 bg-dark-gray p-4 rounded-lg">
+          simulation_log = ""
+          <span class="grey"> /* nothing returned */</span>
+        </div>
+
+        <h2 class="grey mt-6 mb-4">/* testcase_result */</h2>
+        <pre id="test-cases-status-element" class="bg-dark-gray p-4 rounded-lg overflow-x-auto mb-4">1.yaml: ExitSuccess
+2.yaml: ExitSuccess
+3.yaml: ExitSuccess
+4.yaml: ExitSuccess
+5.yaml: ExitSuccess
+6.yaml: ExitSuccess
+7.yaml: ExitSuccess
+</pre>
+
+        <div id="accordion-collapse-test-cases-result" data-accordion="collapse" class="mb-4 bg-dark-gray p-4 rounded-lg hidden" data-inactive-classes="vim-folded orange-low-saturation" data-active-classes="white bg-transparent">
+          <h2 id="accordion-collapse-heading-test-cases-result" class="vim-folded flex orange-low-saturation items-center justify-between w-full text-left hover" data-accordion-target="#accordion-collapse-body-test-cases-result" aria-expanded="false" aria-controls="accordion-collapse-body-test-cases-result">
+            <span class="noselect">failed_test_case =</span>
+          </h2>
+          <div id="accordion-collapse-body-test-cases-result" class="hidden" aria-labelledby="accordion-collapse-heading-test-cases-result">
+            <pre id="test_cases_result-text-element" class="pb-4 overflow-x-auto"></pre>
+          </div>
+        </div>
+        <div id="test-cases-result-empty-tag" class="mb-4 bg-dark-gray p-4 rounded-lg">
+          failed_test_case = ""
+          <span class="grey"> /* nothing returned */</span>
+        </div>
+        <div id="accordion-collapse-dump" data-accordion="collapse" class="mb-4 bg-dark-gray p-4 rounded-lg" data-inactive-classes="vim-folded orange-low-saturation" data-active-classes="white bg-transparent">
+          <h2 id="accordion-collapse-heading-dump" class="orange-low-saturation vim-folded flex items-center justify-between w-full text-left hover" data-accordion-target="#accordion-collapse-body-dump" aria-expanded="false" aria-controls="accordion-collapse-body-dump">
+            <span class="noselect">dump =</span>
+          </h2>
+          <div id="accordion-collapse-body-dump" class="hidden" aria-labelledby="accordion-collapse-heading-dump">
+            <pre id="dump-text-element" class="pb-4 rounded-lg overflow-x-auto">0:	input_addr
+4:	output_addr
+8:	n
+12:	n1
+16:	n2
+20:	i
+24:	one
+28:	alignment
+56:	_start
+67:	revert_n
+75:	loop
+124:	end_loop
+135:	is_palindrome
+146:	is_not_palindrome
+---
+mem[0..3]: 	80 00 00 00	@"input_addr"
+mem[4..7]: 	84 00 00 00	@"output_addr"
+mem[8..11]: 	00 00 00 00	@"n"
+mem[12..15]: 	00 00 00 00	@"n1"
+mem[16..19]: 	00 00 00 00	@"n2"
+mem[20..23]: 	00 00 00 00	@"i"
+mem[24..27]: 	01 00 00 00	@"one"
+mem[28..55]: 	2e 00 00 00 2e 00 00 00 2e 00 00 00 2e 00 00 00 2e 00 00 00 2e 00 00 00 2e 00 00 00	@"alignment"
+mem[56..60]: 	LoadInd 0 	@_start
+mem[61..63]: 	Store (-53)
+mem[64..66]: 	Store (-52)
+mem[67..71]: 	LoadImm 32 	@revert_n
+mem[72..74]: 	Store (-52)
+mem[75..77]: 	Load (-55) 	@loop
+mem[78..82]: 	Beqz 124
+mem[83..85]: 	Sub 24
+mem[86..88]: 	Store (-66)
+mem[89..91]: 	Load (-73)
+mem[92..94]: 	ShiftL 24
+mem[95..97]: 	Store (-79)
+mem[98..100]: 	Load (-86)
+mem[101..103]: 	And 24
+mem[104..106]: 	Add 16
+mem[107..109]: 	Store (-91)
+mem[110..112]: 	Load (-98)
+mem[113..115]: 	ShiftR 24
+mem[116..118]: 	Store (-104)
+mem[119..123]: 	Jmp 75
+mem[124..126]: 	Load (-116) 	@end_loop
+mem[127..129]: 	Sub 16
+mem[130..134]: 	Bnez 146
+mem[135..139]: 	LoadImm 1 	@is_palindrome
+mem[140..144]: 	StoreInd 4
+mem[145..145]: 	Halt
+mem[146..150]: 	LoadImm 0 	@is_not_palindrome
+mem[151..155]: 	StoreInd 4
+mem[156..156]: 	Halt
+mem[157..511]: 	( 00 )
+</pre>
+          </div>
+        </div>
+        <div id="dump-empty-tag" class="hidden mb-4 bg-dark-gray p-4 rounded-lg">
+          dump = ""
+          <span class="grey"> /* nothing returned */</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const assemblerCodeText = document.getElementById(
+        "assembler-code-text-element",
+      ).innerText;
+      const simulationConfigText = document.getElementById(
+        "simulation-config-text-element",
+      ).innerText;
+
+      const commentText = document.getElementById(
+        "comment-text-element",
+      ).innerText;
+      if (commentText.trim() === "") {
+        document.getElementById("comment-header").classList.add("hidden");
+        document
+          .getElementById("empty-comment-header")
+          .classList.remove("hidden");
+      }
+
+      const dumpText = document.getElementById("dump-text-element").innerText;
+      if (dumpText.trim() === "") {
+        document
+          .getElementById("accordion-collapse-dump")
+          .classList.add("hidden");
+        document.getElementById("dump-empty-tag").classList.remove("hidden");
+      }
+
+      const testCasesResultText = document.getElementById(
+        "test_cases_result-text-element",
+      ).innerText;
+      if (testCasesResultText.trim() === "") {
+        document
+          .getElementById("accordion-collapse-test-cases-result")
+          .classList.add("hidden");
+        document
+          .getElementById("test-cases-result-empty-tag")
+          .classList.remove("hidden");
+      }
+
+      const simulationLogText = document.getElementById(
+        "simulation-log-text-element",
+      ).innerText;
+      if (simulationLogText.trim() === "") {
+        document
+          .getElementById("accordion-collapse-simulation-log")
+          .classList.add("hidden");
+        document
+          .getElementById("simulation-log-empty-tag")
+          .classList.remove("hidden");
+      }
+
+      const statusTextElement = document.getElementById("status-text-element");
+      if (statusTextElement.innerText === "") {
+        statusTextElement.innerHTML =
+          'status = "" <span class="grey">/* nothing returned */</span>';
+      }
+
+      const testCasesStatusElement = document.getElementById(
+        "test-cases-status-element",
+      );
+      if (testCasesStatusElement.innerText === "") {
+        testCasesStatusElement.innerHTML =
+          'test_cases_status = "" <span class="grey">/* nothing returned */</span>';
+      }
+
+      var copyCountAssembler = 0;
+      async function copyAssembler() {
+        await navigator.clipboard.writeText(assemblerCodeText);
+        const button = document.getElementById("copy-assembler-button");
+        let buttonText = "";
+        copyCountAssembler++;
+        if (copyCountAssembler === 1) {
+          buttonText = "[copied!]";
+          button.classList.remove("white");
+          button.classList.add("green");
+        } else {
+          buttonText = `[copied ${copyCountAssembler} times!]`;
+        }
+
+        button.innerText = buttonText;
+      }
+
+      var copyCountSimulationConfig = 0;
+      async function copySimulationConfig() {
+        await navigator.clipboard.writeText(simulationConfigText);
+        const button = document.getElementById("copy-simulation-config-button");
+        let buttonText = "";
+        copyCountSimulationConfig++;
+        if (copyCountSimulationConfig === 1) {
+          buttonText = "[copied!]";
+          button.classList.remove("white");
+          button.classList.add("green");
+        } else {
+          buttonText = `[copied ${copyCountSimulationConfig} times!]`;
+        }
+
+        button.innerText = buttonText;
+      }
+    </script>
+
+    <style>
+      body {
+        --c-black: #1a1a1a;
+        --c-white: #e1e1e1;
+        --c-grey: #898989;
+        --c-dark-grey: #222224;
+        --c-purple: #b462ff;
+        --c-fuschia: #ff45b4;
+        --c-blue: #18b6ff;
+        --c-green: #1beb9e;
+        --c-orange: #ff9528;
+        --c-orange-low-saturation: #a5692d;
+        --c-yellow: #dddd25;
+        --line: 2.5ch;
+        --font: "IBM", monospace;
+      }
+
+      body.inverted {
+        --c-black: #d5d5d5;
+        --c-white: #2a2830;
+        --c-dark-grey: #e4e4e7;
+        --c-grey: #7e7e7e;
+        --c-purple: #6b1fa3;
+        --c-fuschia: #f50777;
+        --c-blue: #0b8cff;
+        --c-green: #00a76c;
+        --c-orange: #dd7200;
+        --c-orange-low-saturation: #d08c47;
+        --c-yellow: #949700;
+      }
+
+      .orange-low-saturation {
+        color: var(--c-orange-low-saturation);
+        --c-current: var(--c-orange-low-saturation);
+      }
+
+      .black {
+        color: var(--c-black);
+        --c-current: var(--c-black);
+      }
+
+      .white {
+        color: var(--c-white);
+        --c-current: var(--c-white);
+      }
+
+      .grey {
+        color: var(--c-grey);
+        --c-current: var(--c-grey);
+      }
+
+      .purple {
+        color: var(--c-purple);
+        --c-current: var(--c-purple);
+      }
+
+      .fuschia {
+        color: var(--c-fuschia);
+        --c-current: var(--c-fuschia);
+      }
+
+      .blue {
+        color: var(--c-blue);
+        --c-current: var(--c-blue);
+      }
+
+      .green {
+        color: var(--c-green);
+        --c-current: var(--c-green);
+      }
+
+      .orange {
+        color: var(--c-orange);
+        --c-current: var(--c-orange);
+      }
+
+      .yellow {
+        color: var(--c-yellow);
+        --c-current: var(--c-yellow);
+      }
+
+      .bg-dark-gray {
+        background-color: var(--c-dark-grey);
+      }
+
+      a {
+        color: var(--c-current);
+        text-decoration: none;
+      }
+
+      a:hover,
+      .selected,
+      .hover:hover {
+        color: var(--c-black);
+        background: var(--c-current);
+        box-shadow:
+          0.4ch 0 0 0 var(--c-current),
+          -0.3ch 0 0 0 var(--c-current),
+          0.4ch 0.2ch 0 0 var(--c-current),
+          -0.3ch 0.2ch 0 0 var(--c-current);
+        opacity: 0.8;
+      }
+
+      .large {
+        font-size: 2em;
+        line-height: 1.11111111em;
+        font-weight: 200;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+
+      .columns {
+        width: 100%;
+        column-count: 2;
+        column-gap: 1ch;
+      }
+
+      .noselect {
+        user-select: none;
+      }
+
+      .break-anywhere {
+        line-break: anywhere;
+      }
+
+      html,
+      body {
+        margin: 0;
+        background: var(--c-black);
+        color: var(--c-white);
+        min-height: 100vh;
+        font-family: var(--font);
+        font-weight: 400;
+        line-height: var(--line);
+        letter-spacing: 0.01em;
+      }
+
+      .separator-char {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        body {
+          font-size: 2 * 0.7vw;
+        }
+
+        .separator-char {
+          display: contents;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        body {
+          font-size: 1vw;
+          overflow: auto;
+
+          .separator-char {
+            display: contents;
+          }
+        }
+
+        .large {
+          font-size: 4vw;
+          line-height: 1.11111111em;
+          font-weight: 200;
+        }
+      }
+
+      ::selection {
+        color: #000000;
+        background: var(--c-grey);
+      }
+
+      button {
+        display: inline;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+
+      .hover:hover {
+        cursor: pointer;
+      }
+
+      .pointer-events-none {
+        pointer-events: none;
+      }
+
+      body.invert canvas {
+        opacity: 0.05;
+        filter: none;
+        mix-blend-mode: normal;
+      }
+
+      .subtle-hover:hover {
+        background: transparent;
+        box-shadow: none;
+        cursor: pointer;
+        opacity: 0.8;
+        color: currentColor;
+      }
+
+      .title {
+        font-weight: lighter;
+      }
+
+      textarea {
+        min-height: 20rem;
+      }
+
+      #comment {
+        min-height: 5rem;
+      }
+
+      .vim-folded {
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+
+      .vim-folded::before {
+        content: "+--\00A0";
+        white-space: nowrap;
+      }
+
+      .vim-folded::after {
+        display: inline;
+        content: "\00A0··························································································································································";
+        white-space: nowrap;
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+      }
+    </style>
+  
+
+</body></html>
