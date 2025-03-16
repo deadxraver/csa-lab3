@@ -21,7 +21,7 @@ assert is_binary_palindrome(4026531855) == 1
 assert is_binary_palindrome(3221225474) == 0
 ```
 
-[Solution](./acc32)
+[Solution](./acc32) 7/7
 
 ### f32a `upper_case_pstr`
 
