@@ -52,7 +52,7 @@ assert upper_case_pstr('world\n') == ('WORLD', '')
 # and mem[0..31]: 05 57 4f 52 4c 44 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f
 ```
 
-[Solution](./f32a)
+[Solution](./f32a) 7/7
 
 ### risc-iv `is_prime`
 
