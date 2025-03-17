@@ -9,20 +9,22 @@ dash_ascii:      .byte  0x5f
 error_overflow:  .word  -1
 buffer_size:     .word  0x20
 byte_mask:       .word  255
-alignment:       .word '..........'
 
 \; lit <value> inv lit 1 + +   ==    -value
     .text
-
+.org 0x85
 to_uppercase:
-    @p output_addr b!        \;  b for output
-    lit buffer lit 1 + a!    \;  a for buf addr + reserved byte for length
-loop:
-    a @p buffer_size inv lit 1 + + if end_loop \;  if a == 0x20 => buffer ended
-    @+                       \;  buffer[i] -> stack
-    @p byte_mask and         \;  cut to byte
-    \;TODO:
-end_loop:
+    dup                             \; duplicate for comparing
+    lit 'a' inv lit 1 + +
+    -if ok_go_on                    \; c >= 'a' -> ok
+    ;
+ok_go_on:
+    dup                             \; duplicate for comparing ok
+    lit 'z' inv +
+    -if to_uppercase_end            \; c > 'z' -> not ok
+    lit 'a' inv lit 1 + +           \; c -= 'a'
+    lit 'A' +                       \; c += 'A'
+to_uppercase_end:
     ;
 
 read_line:
@@ -37,6 +39,7 @@ read_line_loop:
     @b                              \; mem[B] -> stack
     @p byte_mask and                \; cut to byte
     dup lit -10 + if read_line_ret  \; if (c == '\n') goto read_line_ret
+    to_uppercase                    \; convert symbol
     @p byte_to_word +
     !+                              \; save char to buffer (buf[i++] = c)
     lit 1 +                         \; decrement counter

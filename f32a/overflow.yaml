@@ -1,8 +1,8 @@
-name: mmmBATCH
-limit: 1000
+name: overflow
+limit: 2000
 memory_size: 0x1000
 input_streams:
-  0x80: ["hello 1234 BATCH\n"]
+  0x80: ["01234567890123456789012345678901\n"]
   0x84: []
 reports:
   - name: Step-by-step
@@ -15,12 +15,8 @@ reports:
     filter:
       - state
     view: |
-      numio[0x80]: {io:0x80:dec}
       numio[0x84]: {io:0x84:dec}
-      numio[0x80]: {io:0x80:sym}
       numio[0x84]: {io:0x84:sym}
     assert: |
-      numio[0x80]: [] >>> []
-      numio[0x84]: [] >>> [72,69,76,76,79,32,49,50,51,52,32,66,65,84,67,72]
-      numio[0x80]: "" >>> ""
-      numio[0x84]: "" >>> "HELLO 1234 BATCH"
+      numio[0x84]: [] >>> [-1]
+      numio[0x84]: "" >>> "?"

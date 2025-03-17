@@ -2,7 +2,7 @@ name: hello
 limit: 1000
 memory_size: 0x1000
 input_streams:
-  0x80: ["penis yes\n"]
+  0x80: ["Penis yes1234\n"]
   0x84: []
 reports:
   - name: Step-by-step
@@ -21,6 +21,6 @@ reports:
       numio[0x84]: {io:0x84:sym}
     assert: |
       numio[0x80]: [] >>> []
-      numio[0x84]: [] >>> [112,101,110,105,115,32,121,101,115]
+      numio[0x84]: [] >>> [80,69,78,73,83,32,89,69,83,49,50,51,52]
       numio[0x80]: "" >>> ""
-      numio[0x84]: "" >>> "penis yes"
+      numio[0x84]: "" >>> "PENIS YES1234"
