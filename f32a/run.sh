@@ -3,3 +3,5 @@ echo "\n======\n"
 wrench upper_case_pstr.s --isa f32a -c lol123.yaml
 echo "\n======\n"
 wrench upper_case_pstr.s --isa f32a -c overflow.yaml
+echo "\n======\n"
+wrench inline.s --isa f32a -c lol123.yaml
