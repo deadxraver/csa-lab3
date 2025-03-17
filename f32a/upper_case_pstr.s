@@ -6,7 +6,7 @@ byte_to_word:    .byte  '\0___'
 input_addr:      .word  0x80
 output_addr:     .word  0x84
 dash_ascii:      .byte  0x5f
-error_overflow:  .word  -1
+error_overflow:  .word  0xCCCC_CCCC \; почему не -1?
 buffer_size:     .word  0x20
 byte_mask:       .word  255
 

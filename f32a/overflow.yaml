@@ -18,5 +18,5 @@ reports:
       numio[0x84]: {io:0x84:dec}
       numio[0x84]: {io:0x84:sym}
     assert: |
-      numio[0x84]: [] >>> [-1]
+      numio[0x84]: [] >>> [-858993460]
       numio[0x84]: "" >>> "?"
