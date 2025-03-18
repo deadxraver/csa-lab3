@@ -23,7 +23,7 @@ loop:
   rem       t2, t0, t1
   beqz      t2, not_prime
   mul       t2, t1, t1
-  ble       t0, t2, is_prime
+  bleu      t0, t2, is_prime
   addi      t1, t1, 1
   j         loop
 error:
