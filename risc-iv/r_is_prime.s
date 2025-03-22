@@ -3,8 +3,6 @@ input_addr:   .word 0x80
 output_addr:  .word 0x84
   .text
 
-.org 0x85
-
 is_prime:
   ; args: t0 - number to be checked whether it is prime, a0 - return addres
   ; returns: t1 - 1 or 0 depending on whether the input number is prime
@@ -48,6 +46,7 @@ is_prime_rec: ; args: t0 - number, t1 - current divisor, a0 - return addr
 is_prime_rec_true:
   xor       t1, t1, t1
   addi      t1, t1, 1
+.org 0x85
   j         is_prime_rec_ret
 is_prime_rec_false:
   xor       t1, t1, t1

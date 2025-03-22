@@ -3,8 +3,6 @@ input_addr:   .word 0x80
 output_addr:  .word 0x84
   .text
 
-.org 0x85
-
 is_prime:
   ; args: t0 - number to be checked whether it is prime, a0 - return addres
   ; returns: t1 - 1 or 0 depending on whether the input number is prime
@@ -50,6 +48,7 @@ print_res:
   sw        t1, 0(t0)
 
   lw        a0, 0(sp)
+.org 0x85
   addi      sp, sp, 4
   jr        a0
 
