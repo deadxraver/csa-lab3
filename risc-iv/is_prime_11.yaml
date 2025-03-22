@@ -1,13 +1,14 @@
 limit: 510000
 memory_size: 0x1000
 input_streams:
-  0x80: [2147483647]
+  0x80: [41]
   0x84: []
 reports:
   - name: step-by-step
     slice: all
     view: |
-      {T0} {T1} {T2} {T3}
+      {T0} {T1} {T2} {T3} 
+      sp: {Sp:dec} el: {S0Fp:dec}
       {pc}:	{instruction}	{pc:label}
   - name: result
     slice: last
