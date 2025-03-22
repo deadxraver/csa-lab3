@@ -1,4 +1,4 @@
-  .data
+ .data
 input_addr:   .word 0x80
 output_addr:  .word 0x84
   .text
@@ -16,14 +16,9 @@ is_prime:
   addi      t1, t1, 2                     ; t1 = 2
   bgt       t1, t0, is_prime_false        ; n < 2 (n == 1) => not prime
   beq       t1, t0, is_prime_true         ; n == 2 ? => prime
+  jal       a0, is_prime_rec
 
-is_prime_loop:
-  rem       t2, t0, t1
-  beqz      t2, is_prime_false
-  mul       t2, t1, t1
-  bleu      t0, t2, is_prime_true
-  addi      t1, t1, 1
-  j         is_prime_loop
+  j         is_prime_ret
 is_prime_true:
   xor       t1, t1, t1
   addi      t1, t1, 1
@@ -39,6 +34,27 @@ is_prime_ret:
   addi      sp, sp, 4                     ; free stack memory
   jr        a0                            ; ret
 
+is_prime_rec: ; args: t0 - number, t1 - current divisor, a0 - return addr
+  addi      sp, sp, -4
+  sw        a0, 0(sp)
+
+  rem       t2, t0, t1
+  beqz      t2, is_prime_rec_false
+  mul       t2, t1, t1
+  bleu      t0, t2, is_prime_rec_true
+  addi      t1, t1, 1
+  jal       a0, is_prime_rec
+  j         is_prime_rec_ret
+is_prime_rec_true:
+  xor       t1, t1, t1
+  addi      t1, t1, 1
+  j         is_prime_rec_ret
+is_prime_rec_false:
+  xor       t1, t1, t1
+is_prime_rec_ret:
+  lw        a0, 0(sp)
+  addi      sp, sp, 4
+  jr        a0
 
 print_res:
   addi      sp, sp, -4
