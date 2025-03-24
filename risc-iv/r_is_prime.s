@@ -45,8 +45,13 @@ is_prime_rec: ; args: t0 - number, t1 - current divisor, a0 - return addr
   j         is_prime_rec_ret
 is_prime_rec_true:
   xor       t1, t1, t1
+
+  j         skip_io_ports
+  mv        t0, t0
+  mv        t0, t0
+  skip_io_ports:
+
   addi      t1, t1, 1
-.org 0x85
   j         is_prime_rec_ret
 is_prime_rec_false:
   xor       t1, t1, t1

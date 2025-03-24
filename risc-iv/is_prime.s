@@ -47,8 +47,12 @@ print_res:
   lw        t0, 0(t0)
   sw        t1, 0(t0)
 
+  j         skip                          ; secret memory optimization
+  mv        t0, t0                        ; =//=
+  mv        t0, t0                        ; =//=
+  skip:
+
   lw        a0, 0(sp)
-.org 0x85
   addi      sp, sp, 4
   jr        a0
 
