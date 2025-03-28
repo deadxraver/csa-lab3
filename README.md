@@ -78,4 +78,4 @@ assert is_prime(284) == 0
 assert is_prime(293) == 1
 ```
 
-[Solution](./risc-iv)
+[Solution](./risc-iv) 7/7
