@@ -103,4 +103,8 @@ assert sum_odd_n(10) == 25
 assert sum_odd_n(90000) == 2025000000
 ```
 
-[Solution](./m68k)
+[Solution](./m68k) 7/7
+
+### RISC-IV Schema (7/9)
+
+![risc-iv](./schema.png)
